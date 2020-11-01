@@ -1,0 +1,34 @@
+#list-movies{
+    font-size: 20px;
+    width: 100%;
+    padding: 20px 60px;
+    position: relative;
+}
+#list-movies > #total-result{
+    width: 100%;
+    margin-bottom: 40px;
+    color: var(--dark-theme-text);
+    font-size: 1em;
+    text-align: center;
+}
+#list-movies .cont-movie{
+    display: inline-block;
+    width: 250px;
+    height: 350px;
+    margin: 10px;
+    position: relative;
+}
+#list-movies .cont-movie > h1{
+    color: var(--dark-theme-text);
+    font-size: 0.8em;
+    position: absolute;
+    bottom: 0px;
+}
+#list-movies .cont-movie > img{
+    width: 100%;
+    height: 100%;
+    filter: brightness(1);
+}
+#list-movies .cont-movie:hover > img{
+    filter: brightness(0.5);
+}

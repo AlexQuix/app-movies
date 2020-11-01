@@ -3,25 +3,40 @@ const path = require("path");
 // PLUGINS
 const HTMLWebpackPlugin = require("html-webpack-plugin");
 
+
 // LOADERS
 const JSLoader = {
     test: /\.js(x)?$/,
     loader: "babel-loader",
-    options: {
-        presets: ["@babel/preset-env", "@babel/preset-react"]
-    }
+    exclude: /node_modules/
 };
+const CSSLoader = {
+    test: /(\.css$)/,
+    use: [
+        {
+            loader: "file-loader",
+            options: {
+                name: "public/[folder]/[name].css"
+            }
+        },
+        "extract-loader",
+        "css-loader"
+    ]
+}
+
+
 
 module.exports = {
     mode: "development",
-    entry: "./src/App.jsx",
+    entry: ["@babel/polyfill", "./src/index.jsx"],
     output: {
         path: path.resolve(__dirname, "../dist"),
         filename: "public/js/App.js"
     },
     module: {
         rules: [
-            JSLoader
+            JSLoader,
+            CSSLoader
         ]
     },
     plugins: [

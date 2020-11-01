@@ -1,0 +1,23 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: "Itim";
+    box-sizing: border-box;
+}
+
+:root{
+    --dark-theme-base-color: #000000;
+    --dark-theme-background-color: #181818;
+    --dark-theme-second-background-color: #252525;
+    --button-theme-base: #168ac1;
+    --button-theme-second: #6f6f6f;
+    --dark-theme-text: #dbdbdb;
+    --dark-second-text: #168ac1;
+}
+
+
+body{
+    width: 100%;
+    min-height: 100vh;
+    background: var(--dark-theme-background-color);
+}

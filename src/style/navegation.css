@@ -1,0 +1,29 @@
+
+#navegation{
+    width: 100%;
+    padding: 10px 50px;
+    background: var(--dark-theme-second-background-color);
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#navegation > header > h1{
+    font-size: 1.5em;
+    font-weight: 400;
+    color: var(--dark-second-text);
+}
+#navegation > #search-movie{
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+#navegation > #search-movie > input{
+    padding: 5px 20px;
+    border-radius: 20px;
+    font-size: 0.8em;
+    color: var(--dark-theme-text);
+    background: var(--dark-theme-background-color);
+    outline: none;
+    box-sizing: border-box;
+}
